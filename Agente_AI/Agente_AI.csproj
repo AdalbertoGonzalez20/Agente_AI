@@ -1,11 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!-- La aplicación se ejecuta como programa de escritorio de Windows. -->
+		<OutputType>WinExe</OutputType>
+		<!-- Se mantiene la versión .NET 10 de tu proyecto original. -->
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<!-- Activa las comprobaciones de referencias que pueden ser nulas. -->
+		<Nullable>enable</Nullable>
+		<!-- Habilita Windows Forms. -->
+		<UseWindowsForms>true</UseWindowsForms>
+		<!-- Importa automáticamente los espacios de nombres comunes de .NET. -->
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
-
+	<ItemGroup>
+		<!-- Microsoft Agent Framework con el proveedor oficial de Anthropic/Claude. -->
+		<!-- El comodín permite restaurar la versión preliminar más reciente disponible. -->
+		<PackageReference Include="Microsoft.Agents.AI.Anthropic" Version="*-*" />
+	</ItemGroup>
 </Project>
